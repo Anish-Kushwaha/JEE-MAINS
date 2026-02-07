@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Main 2026 Result Analysis | ANAND RAJ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #1a237e;
+            --primary-dark: #0d1538;
+            --primary-light: #283593;
+            --secondary-color: #00bcd4;
+            --secondary-dark: #008ba3;
+            --accent-color: #ff5722;
+            --text-light: #e0e0e0;
+            --text-dark: #b0b0b0;
+            --bg-dark: #121212;
+            --bg-card: #1e1e2e;
+            --bg-card-hover: #252538;
+            --border-color: #2d2d3d;
+            --success-color: #4caf50;
+            --error-color: #f44336;
+            --warning-color: #ff9800;
+            --info-color: #2196f3;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #0a0a14 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(30, 30, 40, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary-dark), var(--primary-color));
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .nta-logo {
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--secondary-color);
+        }
+        
+        .nta-logo i {
+            margin-right: 8px;
+            font-size: 20px;
+        }
+        
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .candidate-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .info-item {
+            text-align: center;
+        }
+        
+        .info-label {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-bottom: 4px;
+            color: var(--text-dark);
+        }
+        
+        .info-value {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        /* Main Content */
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+        }
+        
+        /* Score Cards */
+        .score-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .score-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .score-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+        }
+        
+        .physics::before { background-color: var(--error-color); }
+        .chemistry::before { background-color: var(--success-color); }
+        .maths::before { background-color: var(--info-color); }
+        
+        .score-card:hover {
+            transform: translateY(-5px);
+            background-color: var(--bg-card-hover);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subject-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .subject-name i {
+            font-size: 24px;
+        }
+        
+        .physics .subject-name i { color: var(--error-color); }
+        .chemistry .subject-name i { color: var(--success-color); }
+        .maths .subject-name i { color: var(--info-color); }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 12px 5px;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: scale(1.05);
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+        
+        .correct .stat-value { color: var(--success-color); }
+        .incorrect .stat-value { color: var(--error-color); }
+        .attempted .stat-value { color: var(--info-color); }
+        .marks .stat-value { color: var(--warning-color); }
+        
+        .percentage {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: rgba(0, 188, 212, 0.1);
+            color: var(--secondary-color);
+            border: 1px solid rgba(0, 188, 212, 0.3);
+        }
+        
+        /* Summary Section */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            border-left: 5px solid var(--secondary-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .summary-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .summary-value {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .summary-label {
+            font-size: 16px;
+            color: var(--text-dark);
+        }
+        
+        /* Expected Results */
+        .expected-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .expected-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .expected-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .expected-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .expected-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .expected-note {
+            font-size: 14px;
+            color: var(--text-dark);
+            font-style: italic;
+        }
+        
+        .emoji {
+            font-size: 24px;
+            margin-left: 8px;
+        }
+        
+        /* Marking Scheme */
+        .marking-scheme {
+            background-color: rgba(30, 30, 46, 0.8);
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 30px;
+            border-left: 5px solid var(--info-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .marking-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--info-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .marking-title i {
+            margin-right: 10px;
+            color: var(--info-color);
+        }
+        
+        .marking-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .marking-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .marking-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .marking-list i {
+            margin-right: 12px;
+            color: var(--info-color);
+            width: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-dark);
+            font-size: 14px;
+        }
+        
+        footer p {
+            margin-bottom: 8px;
+        }
+        
+        /* Action Buttons Container */
+        .action-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 100;
+        }
+        
+        .action-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .action-btn:hover {
+            transform: scale(1.1);
+            background: var(--primary-light);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .action-btn.toggle-theme {
+            background: var(--warning-color);
+        }
+        
+        .action-btn.toggle-theme:hover {
+            background: #ff7043;
+        }
+        
+        .action-btn.analysis {
+            background: var(--success-color);
+        }
+        
+        .action-btn.analysis:hover {
+            background: #66bb6a;
+        }
+        
+        .action-btn.print {
+            background: var(--info-color);
+        }
+        
+        .action-btn.print:hover {
+            background: #42a5f5;
+        }
+        
+        .action-btn.share {
+            background: var(--accent-color);
+        }
+        
+        .action-btn.share:hover {
+            background: #ff7043;
+        }
+        
+        .action-btn.save {
+            background: var(--secondary-color);
+        }
+        
+        .action-btn.save:hover {
+            background: #26c6da;
+        }
+        
+        /* Tooltip for action buttons */
+        .tooltip {
+            position: absolute;
+            right: 60px;
+            background: var(--bg-card);
+            color: var(--text-light);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .action-btn:hover .tooltip {
+            opacity: 1;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+        
+        .modal-title {
+            font-size: 24px;
+            color: var(--secondary-color);
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            color: var(--text-dark);
+            font-size: 28px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: var(--error-color);
+        }
+        
+        /* Analysis Chart */
+        .analysis-chart {
+            width: 100%;
+            height: 300px;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .chart-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .chart-label {
+            width: 120px;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+        
+        .chart-value {
+            flex-grow: 1;
+            height: 30px;
+            background: var(--border-color);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .chart-fill {
+            height: 100%;
+            border-radius: 15px;
+            transition: width 1.5s ease-out;
+        }
+        
+        .chart-fill.physics { background-color: var(--error-color); }
+        .chart-fill.chemistry { background-color: var(--success-color); }
+        .chart-fill.maths { background-color: var(--info-color); }
+        
+        .chart-percentage {
+            width: 60px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+        
+        body.light-theme {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+    color: #333;
+}
+
+body.light-theme .container {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.light-theme header {
+    background: linear-gradient(to right, #1a237e, #283593);
+}
+        
+        /* Share Options */
+        .share-options {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .share-btn {
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: none;
+            background: var(--bg-card);
+            color: var(--text-light);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .share-btn.whatsapp { background: #25D366; color: white; }
+        .share-btn.email { background: var(--accent-color); color: white; }
+        .share-btn.copy { background: var(--info-color); color: white; }
+        
+        /* Success Message */
+        .success-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--success-color);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transform: translateX(150%);
+            transition: transform 0.5s ease;
+            z-index: 1001;
+        }
+        
+        .success-message.show {
+            transform: translateX(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                border-radius: 8px;
+            }
+            
+            header {
+                padding: 20px 15px;
+            }
+            
+            .nta-logo {
+                position: relative;
+                top: 0;
+                left: 0;
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+            
+            .score-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .action-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                color: #000;
+            }
+            
+            .container {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                background: white;
+            }
+            
+            header {
+                background: #1a237e !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .action-buttons {
+                display: none;
+            }
+            
+            .score-card, .summary-card, .expected-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nta-logo">
+                <i class="fas fa-university"></i>
+                <span>National Testing Agency</span>
+            </div>
+            <h1>JEE Main 2026 Result Analysis</h1>
+            <p>B.E./B.Tech – Paper 1 Examination</p>
+            
+            <div class="candidate-info">
+                <div class="info-item">
+                    <div class="info-label">Application No</div>
+                    <div class="info-value">260310852619</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Candidate Name</div>
+                    <div class="info-value">ANAND RAJ</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Roll No</div>
+                    <div class="info-value">BR071100580</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Test Date & Time</div>
+                    <div class="info-value">22/01/2026, 9:00 AM - 12:00 PM</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="content">
+            <!-- Subject Performance Section -->
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-chart-bar"></i> Subject-wise Performance</h2>
+                
+                <div class="score-cards">
+                    <!-- Physics Card -->
+                    <div class="score-card physics">
+                        <div class="subject-name">
+                            <span>Physics</span>
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        
+                        <div class="stats">
+                            <div class="stat-item attempted">
+                                <div class="stat-value">14</div>
+                                <div class="stat-label">Attempted</div>
+                            </div>
+                            <div class="stat-item correct">
+                                <div class="stat-value">06</div>
+                                <div class="stat-label">Correct</div>
+                            </div>
+                            <div class="stat-item incorrect">
+                                <div class="stat-value">08</div>
+                                <div class="stat-label">Incorrect</div>
+                            </div>
+                            <div class="stat-item marks">
+                                <div class="stat-value">16</div>
+                                <div class="stat-label">Marks</div>
+                            </div>
+                        </div>
+                        
+                        <div class="percentage">
+                            Percentage: 16%
+                        </div>
+                    </div>
+                    
+                    <!-- Chemistry Card -->
+                    <div class="score-card chemistry">
+                        <div class="subject-name">
+                            <span>Chemistry</span>
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        
+                        <div class="stats">
+                            <div class="stat-item attempted">
+                                <div class="stat-value">16</div>
+                                <div class="stat-label">Attempted</div>
+                            </div>
+                            <div class="stat-item correct">
+                                <div class="stat-value">03</div>
+                                <div class="stat-label">Correct</div>
+                            </div>
+                            <div class="stat-item incorrect">
+                                <div class="stat-value">13</div>
+                                <div class="stat-label">Incorrect</div>
+                            </div>
+                            <div class="stat-item marks">
+                                <div class="stat-value">-1</div>
+                                <div class="stat-label">Marks</div>
+                            </div>
+                        </div>
+                        
+                        <div class="percentage">
+                            Percentage: -1%
+                        </div>
+                    </div>
+                    
+                    <!-- Mathematics Card -->
+                    <div class="score-card maths">
+                        <div class="subject-name">
+                            <span>Mathematics</span>
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        
+                        <div class="stats">
+                            <div class="stat-item attempted">
+                                <div class="stat-value">14</div>
+                                <div class="stat-label">Attempted</div>
+                            </div>
+                            <div class="stat-item correct">
+                                <div class="stat-value">05</div>
+                                <div class="stat-label">Correct</div>
+                            </div>
+                            <div class="stat-item incorrect">
+                                <div class="stat-value">09</div>
+                                <div class="stat-label">Incorrect</div>
+                            </div>
+                            <div class="stat-item marks">
+                                <div class="stat-value">11</div>
+                                <div class="stat-label">Marks</div>
+                            </div>
+                        </div>
+                        
+                        <div class="percentage">
+                            Percentage: 11%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Overall Summary Section -->
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-clipboard-check"></i> Overall Examination Summary</h2>
+                
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="summary-value">44</div>
+                        <div class="summary-label">Total Questions Attempted</div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-value">14</div>
+                        <div class="summary-label">Total Correct Answers</div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-value">30</div>
+                        <div class="summary-label">Total Incorrect Answers</div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-value">26</div>
+                        <div class="summary-label">Total Marks Obtained</div>
+                    </div>
+                </div>
+                
+                <div class="summary-card" style="margin-top: 15px;">
+                    <div class="summary-value">8.67% <span class="emoji">🤣</span></div>
+                    <div class="summary-label">Overall Percentage</div>
+                </div>
+            </div>
+            
+            <!-- Expected Results Section -->
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-chart-line"></i> Expected Results</h2>
+                
+                <div class="expected-results">
+                    <div class="expected-card">
+                        <div class="expected-title">Expected Percentile</div>
+                        <div class="expected-value">48.00 - 58.00 <span class="emoji">🤣</span></div>
+                        <div class="expected-note">Based on overall performance and historical data</div>
+                    </div>
+                    
+                    <div class="expected-card">
+                        <div class="expected-title">Expected Rank (OBC Category)</div>
+                        <div class="expected-value">1,80,000 – 2,20,000 <span class="emoji">🤣🤣</span></div>
+                        <div class="expected-note">Rank range estimated for OBC category candidates</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Marking Scheme Section -->
+            <div class="marking-scheme">
+                <div class="marking-title"><i class="fas fa-info-circle"></i> JEE Main 2026 Marking Scheme (B.E./B.Tech - Paper 1)</div>
+                
+                <ul class="marking-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Correct Answer:</strong> +4 marks</li>
+                    <li><i class="fas fa-times-circle"></i> <strong>Incorrect Answer (MCQs):</strong> -1 mark</li>
+                    <li><i class="fas fa-minus-circle"></i> <strong>Unattempted Questions:</strong> 0 marks</li>
+                    <li><i class="fas fa-calculator"></i> <strong>Numerical Value Section:</strong> +4 for correct, 0 for incorrect (no negative marking)</li>
+                    <li><i class="fas fa-list-ol"></i> <strong>Structure:</strong> 30 questions per subject (20 MCQ + 10 Numerical), with 5 of the numerical questions being optional.</li>
+                    <li><i class="fas fa-star"></i> <strong>Total Score:</strong> 300 marks (75 questions out of 90, 3 hours duration)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <p><strong>Disclaimer:</strong> This is a simulated result analysis is expected only.</p>
+            <p>"I don't follow the universe — I reprogram it."</p>
+            <p>© 2026 Anish Kushwaha • All rights reserved</p>
+            <p> ⚚Ⓐ⚚ </p>
+        </footer>
+    </div>
+    
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button class="action-btn toggle-theme" id="themeToggle" title="Toggle Theme">
+            <i class="fas fa-moon"></i>
+            <span class="tooltip">Toggle Theme</span>
+        </button>
+        
+        <button class="action-btn analysis" id="analysisBtn" title="Performance Analysis">
+            <i class="fas fa-chart-pie"></i>
+            <span class="tooltip">Performance Analysis</span>
+        </button>
+        
+        <button class="action-btn print" id="printBtn" title="Print Report">
+            <i class="fas fa-print"></i>
+            <span class="tooltip">Print Report</span>
+        </button>
+        
+        <button class="action-btn share" id="shareBtn" title="Share Result">
+            <i class="fas fa-share-alt"></i>
+            <span class="tooltip">Share Result</span>
+        </button>
+        
+        <button class="action-btn save" id="saveBtn" title="Save as PDF">
+            <i class="fas fa-file-pdf"></i>
+            <span class="tooltip">Save as PDF</span>
+        </button>
+    </div>
+    
+    <!-- Performance Analysis Modal -->
+    <div class="modal" id="analysisModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Performance Analysis</h2>
+                <button class="close-modal" id="closeAnalysisModal">&times;</button>
+            </div>
+            
+            <h3 style="margin-bottom: 20px; color: var(--secondary-color);">Subject-wise Performance Comparison</h3>
+            
+            <div class="analysis-chart">
+                <div class="chart-bar">
+                    <div class="chart-label">Physics</div>
+                    <div class="chart-value">
+                        <div class="chart-fill physics" id="physicsChart" style="width: 0%"></div>
+                    </div>
+                    <div class="chart-percentage" id="physicsPercentage">16%</div>
+                </div>
+                
+                <div class="chart-bar">
+                    <div class="chart-label">Chemistry</div>
+                    <div class="chart-value">
+                        <div class="chart-fill chemistry" id="chemistryChart" style="width: 0%"></div>
+                    </div>
+                    <div class="chart-percentage" id="chemistryPercentage">-1%</div>
+                </div>
+                
+                <div class="chart-bar">
+                    <div class="chart-label">Mathematics</div>
+                    <div class="chart-value">
+                        <div class="chart-fill maths" id="mathsChart" style="width: 0%"></div>
+                    </div>
+                    <div class="chart-percentage" id="mathsPercentage">11%</div>
+                </div>
+            </div>
+            
+            <h3 style="margin: 30px 0 15px; color: var(--secondary-color);">Performance Insights</h3>
+            <ul style="padding-left: 20px; margin-bottom: 20px;">
+                <li style="margin-bottom: 10px;">Physics is your strongest subject with 16% performance.</li>
+                <li style="margin-bottom: 10px;">Chemistry shows negative performance due to high incorrect attempts.</li>
+                <li style="margin-bottom: 10px;">Mathematics performance is moderate at 11%.</li>
+                <li style="margin-bottom: 10px;">Overall accuracy rate: 31.8% (14 correct out of 44 attempted).</li>
+                <li>Recommendation: Focus on accuracy over attempts to avoid negative marking.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Share Options Modal -->
+    <div class="modal" id="shareModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Share Result</h2>
+                <button class="close-modal" id="closeShareModal">&times;</button>
+            </div>
+            
+            <p style="margin-bottom: 25px; color: var(--text-dark);">Share your JEE Main 2026 result analysis with others:</p>
+            
+            <div class="share-options">
+                <button class="share-btn whatsapp" id="whatsappShare">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </button>
+                
+                <button class="share-btn email" id="emailShare">
+                    <i class="fas fa-envelope"></i> Email
+                </button>
+                
+                <button class="share-btn copy" id="copyLink">
+                    <i class="fas fa-copy"></i> Copy Link
+                </button>
+            </div>
+            
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                <p style="color: var(--text-dark); margin-bottom: 10px;">Share this unique result ID with others:</p>
+                <div style="background: rgba(0, 0, 0, 0.2); padding: 15px; border-radius: 8px; font-family: monospace; font-size: 18px; text-align: center; color: var(--secondary-color);">
+                    JEE2026-AR-260310852619
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i>
+        <span id="successText">Operation completed successfully!</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elements
+            const themeToggle = document.getElementById('themeToggle');
+            const analysisBtn = document.getElementById('analysisBtn');
+            const printBtn = document.getElementById('printBtn');
+            const shareBtn = document.getElementById('shareBtn');
+            const saveBtn = document.getElementById('saveBtn');
+            const analysisModal = document.getElementById('analysisModal');
+            const shareModal = document.getElementById('shareModal');
+            const closeAnalysisModal = document.getElementById('closeAnalysisModal');
+            const closeShareModal = document.getElementById('closeShareModal');
+            const successMessage = document.getElementById('successMessage');
+            const successText = document.getElementById('successText');
+            
+            themeToggle.addEventListener('click', function () {
+    const isLight = document.body.classList.toggle('light-theme');
+
+    if (isLight) {
+        themeToggle.innerHTML =
+            '<i class="fas fa-sun"></i><span class="tooltip">Toggle Theme</span>';
+        showSuccessMessage('Light theme activated');
+    } else {
+        themeToggle.innerHTML =
+            '<i class="fas fa-moon"></i><span class="tooltip">Toggle Theme</span>';
+        showSuccessMessage('Dark theme activated');
+    }
+});
+            
+            // Feature 2: Performance Analysis Modal with Animated Charts
+            analysisBtn.addEventListener('click', function() {
+                analysisModal.style.display = 'flex';
+                
+                // Animate the chart bars after a short delay
+                setTimeout(() => {
+                    document.getElementById('physicsChart').style.width = '16%';
+                    document.getElementById('chemistryChart').style.width = '0%';
+                    document.getElementById('mathsChart').style.width = '11%';
+                    
+                    // For chemistry, we'll show a minimal bar for negative percentage
+                    setTimeout(() => {
+                        document.getElementById('chemistryChart').style.width = '1%';
+                    }, 800);
+                }, 300);
+            });
+            
+            // Feature 3: Print Functionality
+            printBtn.addEventListener('click', function() {
+                window.print();
+                showSuccessMessage('Print dialog opened');
+            });
+            
+            // Feature 4: Share Modal with Options
+            shareBtn.addEventListener('click', function() {
+                shareModal.style.display = 'flex';
+            });
+            
+            // Feature 5: Save as PDF (Simulated)
+            saveBtn.addEventListener('click', function() {
+                // In a real implementation, this would use a library like jsPDF
+                // For this demo, we'll simulate the process
+                showSuccessMessage('Generating PDF...');
+                
+                setTimeout(() => {
+                    showSuccessMessage('PDF saved successfully!');
+                    
+                    // Create a fake download link
+                    const link = document.createElement('a');
+                    link.href = '#';
+                    link.download = 'JEE_Main_2026_Result_ANAND_RAJ.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }, 1500);
+            });
+            
+            // Feature 6: Share Options
+            document.getElementById('whatsappShare').addEventListener('click', function() {
+                const text = "Check out my JEE Main 2026 result analysis!";
+                const url = encodeURIComponent(window.location.href);
+                window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+                showSuccessMessage('WhatsApp sharing opened');
+            });
+            
+            document.getElementById('emailShare').addEventListener('click', function() {
+                const subject = "My JEE Main 2026 Result Analysis";
+                const body = `Check out my JEE Main 2026 result analysis:\n\nCandidate: ANAND RAJ\nApplication No: 260310852619\nTotal Marks: 26\nOverall Percentage: 8.67%\n\nView detailed analysis at: ${window.location.href}`;
+                window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                showSuccessMessage('Email client opened');
+            });
+            
+            document.getElementById('copyLink').addEventListener('click', function() {
+                // Copy current URL to clipboard
+                navigator.clipboard.writeText(window.location.href)
+                    .then(() => {
+                        showSuccessMessage('Link copied to clipboard!');
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy: ', err);
+                        showSuccessMessage('Failed to copy link');
+                    });
+            });
+            
+            // Close modals
+            closeAnalysisModal.addEventListener('click', function() {
+                analysisModal.style.display = 'none';
+            });
+            
+            closeShareModal.addEventListener('click', function() {
+                shareModal.style.display = 'none';
+            });
+            
+            // Close modals when clicking outside
+            window.addEventListener('click', function(event) {
+                if (event.target === analysisModal) {
+                    analysisModal.style.display = 'none';
+                }
+                if (event.target === shareModal) {
+                    shareModal.style.display = 'none';
+                }
+            });
+            
+            // Animation for cards on load
+            const cards = document.querySelectorAll('.score-card, .summary-card, .expected-card');
+            
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 + (index * 100));
+            });
+            
+            // Display current date in the footer
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const dateString = now.toLocaleDateString('en-US', options);
+            
+            const dateElement = document.createElement('p');
+            dateElement.textContent = `Report generated on: ${dateString}`;
+            dateElement.style.marginTop = '10px';
+            dateElement.style.fontSize = '13px';
+            dateElement.style.color = 'var(--text-dark)';
+            
+            document.querySelector('footer').appendChild(dateElement);
+            
+            // Function to show success messages
+            function showSuccessMessage(message) {
+                successText.textContent = message;
+                successMessage.classList.add('show');
+                
+                setTimeout(() => {
+                    successMessage.classList.remove('show');
+                }, 3000);
+            }
+            
+            // Add keyboard shortcuts
+            document.addEventListener('keydown', function(event) {
+                // Ctrl+P for print
+                if (event.ctrlKey && event.key === 'p') {
+                    event.preventDefault();
+                    printBtn.click();
+                }
+                
+                // Ctrl+T for theme toggle
+                if (event.ctrlKey && event.key === 't') {
+                    event.preventDefault();
+                    themeToggle.click();
+                }
+                
+                // Escape to close modals
+                if (event.key === 'Escape') {
+                    analysisModal.style.display = 'none';
+                    shareModal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
